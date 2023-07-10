@@ -1,0 +1,17 @@
+.popular-section {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+.popular-blogs {
+    display: flex;
+}
+.blogs-list li {
+    text-decoration: none;
+    text-transform: none;
+}
+.title {
+    background-color: aqua;
+    text-decoration: none;
+}
+
