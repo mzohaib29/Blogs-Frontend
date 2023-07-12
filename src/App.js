@@ -4,6 +4,8 @@ import { ThemeProvider } from "styled-components"
 import Nav from './components/Nav';
 import Home from "./components/Home";
 import SingleBlog from "./components/SingleBlog";
+import CreateBlog from "./components/CreateBlog";
+import AllBlogs from "./components/All_Blogs";
 // import Banner from './components/Banner';
 // import Popular from './components/PopularSection';
 
@@ -40,9 +42,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="/SingleBlog/:id" element={<SingleBlog />}/>
+            <Route path="/CreateBlog" element={<CreateBlog />}/>
+            <Route path="/AllBlogs" element={<AllBlogs />}/>
             {/* <Route path="/about" element={<About />}/>
             <Route path="/contact" element={<Contact />}/>
-            <Route path="/products" element={<Products />}/>
             <Route path="/cart" element={<Cart />}/>
             <Route path="/*" element={<ErrorPage />}/> */}
         </Routes>

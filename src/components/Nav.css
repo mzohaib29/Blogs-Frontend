@@ -1,15 +1,22 @@
-.nav { 
+.navber-active, .navbar {
+    background-color: rgb(255, 192, 23);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 0.1px solid black;
+}
+
+/* .nav { 
     display: flex;
     justify-content: space-around;
     background-color: rgb(255, 192, 23);
     border-bottom: 1px solid black;
     margin-top: -5px;
-}
+} */
 .logo {
     cursor: pointer;
     width: 215px;
     height: 55px;
-    margin-top: 17px;
 }
 .menu-list {
     display: flex;

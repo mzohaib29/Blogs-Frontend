@@ -4,9 +4,9 @@ import Styled from 'styled-components';
 const MyImages = ({ imgs = [{ url: " " }] }) => {
 
   const [mainImage, setMainImage] = useState(imgs[0]);
-  // console.log(mainImage)
+  console.log("Hello main",mainImage)
 
-  const origin = window.location.origin;
+  const origin = "http://127.0.0.1:8000"
   return (
     <Wrapper>
       <div className='grid grid-four-columns'>
@@ -18,10 +18,11 @@ const MyImages = ({ imgs = [{ url: " " }] }) => {
                 <img
                   className='box-image--style'
                   key={index}
-                  src={origin + '/' + curElm.url}
+                  src={origin + curElm.url}
                   alt={curElm.filename} 
                   onClick = {() => setMainImage(curElm)}
                 />
+                {/* {console.log("Images", ))} */}
               </figure>
             );
           })
@@ -43,8 +44,8 @@ gap: 1rem;
   width: 30%;
 
   img {
-    max-width: 100%;
-    max-height: 100%;
+    margin-left: -30%;
+    margin-top: 50px;
     background-size: cover;
     object-fit: contain;
     cursor: pointer;

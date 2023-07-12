@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from './Banner';
 import PopularBlog from './PopularSection';
+import AllBlogs from './All_Blogs';
 
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
         <>
         <Banner myData = {data}/>
         <PopularBlog />
+        <AllBlogs />
         </>
     );
 }

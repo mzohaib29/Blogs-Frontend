@@ -4,15 +4,15 @@ import { useEffect } from "react";
 import { useBlogContext } from "../context/blogsContext"
 import PageNavigation from "./pageNavigation";
 import MyImages from "./MyImages";
-import AuthorImage from './author.jpg'
 
 const API = "http://127.0.0.1:8000/articles/get";
+const baseURL = 'http://127.0.0.1:8000';
 
 const SingleBlog = () => {
 
     const { getSingleBlog, isSingleLoading, singleBlog } = useBlogContext();
     const { id } = useParams();
-    console.log("debug single blog",singleBlog)
+    // console.log("debug single blog",singleBlog)
     // singleBlog && singleBlog[id] ? console.log("Data exists", id, singleBlog[id]) : console.log("Data does not exist")
     const { title, thumb, body, date, author_name, author_image  } = singleBlog ? singleBlog : {};
 
@@ -28,32 +28,31 @@ const SingleBlog = () => {
 
     useEffect(() => {
         getSingleBlog(`${API}/${id}`);
-    }, [])
+    },[])
 
     if (isSingleLoading) {
         return <div>Single page Loading......</div>
     }
 
+    const imageSrc = baseURL + author_image;
     return (
         <Wrapper>
-            <PageNavigation title={title} />
+            <PageNavigation title={title}/>
                 <div className="grid grid-two-column">
-                    <div className="product-images">
-                        <MyImages imgs={[{url: thumb}]} />
-                    </div>
                     <div className="blog-data">
                         <h2 className="title">{title}</h2>
                         <div className="author-data">
-                          <img className="author-img" src={AuthorImage} alt="Author" />
-                          <div className="author">
-                            <div className="name">
-                              <p className="author-name">{author_name}</p>
-                              <span>.</span>
-                              <p className="follow">Follow</p>
-                            </div>
-                            <p className="date">{formattedDate} . {formattedTime}</p>
+                            <img className="author-img" src={imageSrc} alt="Author" />
+                            <div className="author">
+                              <div className="name">
+                                <p className="author-name">{author_name}</p>
+                                <span>.</span>
+                                <p className="follow">Follow</p>
+                              </div>
+                              <p className="date">{formattedDate} . {formattedTime}</p>
                           </div>
                         </div>
+                        <MyImages imgs={[{url: thumb}]} />
                         <p className="body">{body}</p>
                     </div>
                 </div>
@@ -70,7 +69,7 @@ const Wrapper = styled.section`
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: -0.011em;
     line-height: 52px;
-    margin-bottom: 32px;
+    margin-bottom: 50px;
     margin-top: 1.19em;
     font-weight: 800;
   }
@@ -125,6 +124,7 @@ const Wrapper = styled.section`
     margin: auto;
     width: 40%;
   }
+
 `;
 
 export default SingleBlog;
