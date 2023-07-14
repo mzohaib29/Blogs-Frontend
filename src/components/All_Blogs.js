@@ -9,7 +9,7 @@ const AllBlogs = (curElm) => {
     const {isLoading, blogs} = useBlogContext();
 
     if(isLoading) {
-        return <div>.......Loading</div>
+        return <div>.......All blogs Loading</div>
     }
     
     return (

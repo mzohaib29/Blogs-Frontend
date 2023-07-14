@@ -49,11 +49,11 @@ const CreateBlog = () => {
                     <input className="body" name="body" onChange={(event) => { setBody(event.target.value) }} placeholder="Tell your story…"/>
                     <input className="author_name" name="author" onChange={(event) => { setAuthorName(event.target.value) }} placeholder="Author Name"/>
                     <div className="author">
-                        <label for="author_file">Upload Author Image</label>
+                        <label className="label" for="author_file">Upload Author Image</label>
                         <input id="author_file" type="file" onChange={handleAuthorImage} name="thumb" label="author_image"/>
                     </div>
                     <div className="main">
-                        <label for="main_file">Upload Blog Image</label>
+                        <label className="label" for="main_file">Upload Blog Image</label>
                         <input id="main_file" type="file" onChange={handleThumbChange} name="thumb" />
                     </div> 
                     <button className="btn" onClick={update}>Publish</button>
@@ -63,6 +63,20 @@ const CreateBlog = () => {
 }
 
 const Wrapper = styled.section`
+#author_file, #main_file{
+  display: none
+}
+.author-data {
+  display: flex;
+}
+.label {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: white;
+  color: black;
+  outline: auto
+}
 .Create-blog {
   display: flex;
   flex-direction: column;
@@ -98,7 +112,7 @@ const Wrapper = styled.section`
   visibility: visible;
 }
 .author_name {
-  margin-top: 10px;
+  margin: 20px 0px;
   outline: none;
   font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
   border: none;
@@ -109,9 +123,22 @@ const Wrapper = styled.section`
   letter-spacing: -.003em;
   
 }
-.author_file {
-  padding: 20px 0px;
+.author {
+  font-size: 16px;
+  margin: 30px 0px;
+  font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
 }
+// .author label {
+//   margin: 20px 30px 0px 0px;
+// }
+.main {
+  font-size: 16px;
+  font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+}
+// .main label {
+//   margin: 20px 30px 0px 0px;
+// }
+
 .btn {
   color: white;
   width: 100px;

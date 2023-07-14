@@ -34,7 +34,7 @@ const Nav = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to = "/" className = "login" onClick={() => setMenuIcon(false)}>
+                        <NavLink to = "/Login" className = "login" onClick={() => setMenuIcon(false)}>
                             Login
                         </NavLink>
                     </li>

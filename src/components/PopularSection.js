@@ -11,7 +11,7 @@ const PopularBlog = () => {
     // console.log(blogs, isLoading)
 
     if(isLoading) {
-        return <div>.......Loading</div>
+        return <div>.......Trending Section Loading</div>
     }
     
     return (

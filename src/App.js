@@ -6,6 +6,8 @@ import Home from "./components/Home";
 import SingleBlog from "./components/SingleBlog";
 import CreateBlog from "./components/CreateBlog";
 import AllBlogs from "./components/All_Blogs";
+import LoginForm from "./LoginForm";
+import { AuthProvider } from "./context/authContext";
 // import Banner from './components/Banner';
 // import Popular from './components/PopularSection';
 
@@ -37,19 +39,22 @@ function App() {
 
   return (
       <ThemeProvider theme={theme}>
-        <Router>
-          <Nav />
-          <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/SingleBlog/:id" element={<SingleBlog />}/>
-            <Route path="/CreateBlog" element={<CreateBlog />}/>
-            <Route path="/AllBlogs" element={<AllBlogs />}/>
-            {/* <Route path="/about" element={<About />}/>
-            <Route path="/contact" element={<Contact />}/>
-            <Route path="/cart" element={<Cart />}/>
-            <Route path="/*" element={<ErrorPage />}/> */}
-        </Routes>
-      </Router>
+        <AuthProvider>
+          <Router>
+            <Nav />
+            <Routes>
+              <Route path="/" element={<Home />} exact/>
+              <Route path="/SingleBlog/:id" element={<SingleBlog />}/>
+              <Route path="/CreateBlog" element={<CreateBlog />}/>
+              <Route path="/AllBlogs" element={<AllBlogs />}/>
+              <Route path="/Login" element={<LoginForm />}/>
+              {/* <Route path="/about" element={<About />}/>
+              <Route path="/contact" element={<Contact />}/>
+              <Route path="/cart" element={<Cart />}/>
+              <Route path="/*" element={<ErrorPage />}/> */}
+            </Routes>
+          </Router>
+        </AuthProvider>
     </ThemeProvider>
   );
 }
