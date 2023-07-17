@@ -45,6 +45,7 @@ const CreateBlog = () => {
         <Wrapper>
             <PageNavigation title={'Create Blog'} />
                 <div className="Create-blog">
+                    <h1 className="write">Write your thoughts</h1>
                     <input className="title" name="title" onChange={(event) => { setTitle(event.target.value) }} placeholder="Title"/>
                     <input className="body" name="body" onChange={(event) => { setBody(event.target.value) }} placeholder="Tell your story…"/>
                     <input className="author_name" name="author" onChange={(event) => { setAuthorName(event.target.value) }} placeholder="Author Name"/>
@@ -66,6 +67,15 @@ const Wrapper = styled.section`
 #author_file, #main_file{
   display: none
 }
+.write {
+  margin: 0px auto;
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 32px;
+  color: #000000;
+  font-family: gt-super,Georgia,Cambria,"Times New Roman",Times,serif;
+}
 .author-data {
   display: flex;
 }
@@ -80,13 +90,16 @@ const Wrapper = styled.section`
 .Create-blog {
   display: flex;
   flex-direction: column;
-  padding: 60px;
-  margin: auto;
+  margin: 40px auto;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  height: 650px;
+  padding: 30px;
   width: 40%;
 }
 .title {
   font-size: 50px;
   border: none;
+  margin-top: 10px;
   color: #b3b3b1;
   font-family: medium-content-title-font,Georgia,Cambria,"Times New Roman",Times,serif;
   font-style: normal;
@@ -104,6 +117,7 @@ const Wrapper = styled.section`
   font-weight: 400;
   font-style: normal;
   font-size: 24px;
+  height: 240px;
   line-height: 1.58;
   letter-spacing: -.003em;
   word-break: break-word;
@@ -125,25 +139,21 @@ const Wrapper = styled.section`
 }
 .author {
   font-size: 16px;
-  margin: 30px 0px;
+  margin: 30px auto;
   font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
 }
-// .author label {
-//   margin: 20px 30px 0px 0px;
-// }
 .main {
   font-size: 16px;
+  margin: auto;
   font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
 }
-// .main label {
-//   margin: 20px 30px 0px 0px;
-// }
 
 .btn {
   color: white;
   width: 100px;
   height: 35px;
   font-size: 17px;
+  margin: auto;
   background-color: green;
   font-weight: 600;
   cursor: pointer;

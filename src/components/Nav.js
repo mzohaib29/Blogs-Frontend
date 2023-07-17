@@ -8,7 +8,10 @@ import Logo from './medium.png'
 
 const Nav = () => {
     const [menuIcon, setMenuIcon] = useState();
-
+    const handleLogout = () => {
+        localStorage.removeItem('authTokens');
+        window.location.href = '/login'; 
+}
     return(
         <div className={menuIcon ? "navber-active" : "navbar"}>
             <div className="logo">
@@ -41,6 +44,11 @@ const Nav = () => {
                     <li>
                         <NavLink to = "/" className = "signup" onClick={() => setMenuIcon(false)}>
                             Signup
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to = "/Logout" className = "signup" onClick={handleLogout}>
+                            Logout
                         </NavLink>
                     </li>
                 </ul>

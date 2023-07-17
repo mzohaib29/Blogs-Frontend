@@ -7,7 +7,10 @@ import SingleBlog from "./components/SingleBlog";
 import CreateBlog from "./components/CreateBlog";
 import AllBlogs from "./components/All_Blogs";
 import LoginForm from "./LoginForm";
+import PrivateRoute from "./utils/PrivateRoute";
 import { AuthProvider } from "./context/authContext";
+import LogoutNav from "./components/LogoutNav";
+import AuthContext from "./context/authContext";
 // import Banner from './components/Banner';
 // import Popular from './components/PopularSection';
 
@@ -37,6 +40,8 @@ function App() {
     },
   };
 
+  
+
   return (
       <ThemeProvider theme={theme}>
         <AuthProvider>
@@ -48,10 +53,6 @@ function App() {
               <Route path="/CreateBlog" element={<CreateBlog />}/>
               <Route path="/AllBlogs" element={<AllBlogs />}/>
               <Route path="/Login" element={<LoginForm />}/>
-              {/* <Route path="/about" element={<About />}/>
-              <Route path="/contact" element={<Contact />}/>
-              <Route path="/cart" element={<Cart />}/>
-              <Route path="/*" element={<ErrorPage />}/> */}
             </Routes>
           </Router>
         </AuthProvider>
