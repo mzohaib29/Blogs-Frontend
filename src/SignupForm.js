@@ -11,15 +11,17 @@ const SignupForm = () => {
                     <h1>Join Medium.</h1>
                     <p>Finish creating your account for the full Medium experience.</p>
                     <label className='email-label' For="first-name">Enter First Name</label>
-                    <input id = "first-name" className='email' type="text" name='text' />
+                    <input id = "first-name" className='email' type="text" name='text' placeholder='Enter First Name'/>
                     <label className='email-label' For="last-name">Enter Last Name</label>
-                    <input id = "last-name" className='email' type="text" name='text' />
+                    <input id = "last-name" className='email' type="text" name='text' placeholder='Enter Last Name'/>
                     <label className='email-label' For="username">Usename</label>
-                    <input id = "username" className='email' type="text" name='text' />
+                    <input id = "username" className='email' type="text" name='text' placeholder='Usename'/>
                     <label className='email-label' For="email">Your email</label>
-                    <input id = "email" className='email' type="email" name='email' />
+                    <input id = "email" className='email' type="email" name='email' placeholder='Your email'/>
                     <label className='password-label' For="password">Enter password</label>
-                    <input id = "password" className='password' type="password" name='password' />
+                    <input id = "password" className='password' type="password" name='password' placeholder='Enter password'/>
+                    <label className='password-label' For="password2">Confirm password</label>
+                    <input id = "password2" className='password2' type="password" name='password2' placeholder='Confirm password'/>
                     <input className='btn' type="submit" />
                 </div>
             </form>
@@ -33,10 +35,14 @@ form {
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
     height: 700px;
 }
+label {
+    display:none;
+}
 .form-fields {
     display: flex;
     width: 50%;
-    padding: 0px;
+    padding: 80px;
+    // box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
     font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
     align-items: center;
     margin: 50px auto;
@@ -48,6 +54,7 @@ h1 {
     font-weight: 400;
     letter-spacing: -0.03em;
     line-height: 32px;
+    text-shadow: -5px 5px 11px grey;
     color: #000000;
     font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif;
 }
@@ -55,6 +62,7 @@ p {
     font-size: 16px;
     line-height: 24px;
     color: #242424;
+    text-shadow: -5px 5px 11px grey;
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
@@ -89,11 +97,13 @@ input {
     width: 270px;
     outline: none;
     color: #000000b5;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
     padding: 1px 2px;
     -webkit-tap-highlight-color: transparent;
     text-align: center;
-    margin: 0px 10px;
-    border-bottom: 1px solid #0000007a;
+    margin: 2px 10px;
+    // border-bottom: 1px solid #0000007a;
+    border-radius: 20px;
     font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
 }
 .email {
@@ -117,10 +127,7 @@ input {
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
-    font-size: 15px;
-    height: 30px;
-    
-}
+
 `;
 
 export default SignupForm

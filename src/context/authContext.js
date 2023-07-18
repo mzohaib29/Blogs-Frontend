@@ -12,6 +12,7 @@ export const AuthProvider = ({children}) => {
     const [authToken, setAuthToken] = useState(localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null);
     const [user, setUser] = useState(localStorage.getItem('authTokens') ? jwt_decode(localStorage.getItem('authTokens')) : null);
 
+    console.log(authToken)
     // const history = useHistory()
 
     const loginUser = async (e) => {
@@ -53,7 +54,7 @@ export const AuthProvider = ({children}) => {
             headers:{
                 'Content-type':'application/json',
             },
-            body: JSON.stringify({'username': e.target.username.value ,'email': e.target.email.value, 'password': e.target.password.value}),
+            body: JSON.stringify({'username': e.target.username.value ,'email': e.target.email.value, 'password': e.target.password.value, 'password2': e.target.password2.value}),
         })
         const data = await response.json()
         console.log(data)

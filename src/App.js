@@ -10,6 +10,7 @@ import LoginForm from "./LoginForm";
 import PrivateRoute from "./utils/PrivateRoute";
 import { AuthProvider } from "./context/authContext";
 import SignupForm from "./SignupForm";
+import OurStory from "./OurStory";
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
               <Route path="/SingleBlog/:id" element={<SingleBlog />}/>
               <Route path="/CreateBlog" element={<CreateBlog />}/>
               <Route path="/AllBlogs" element={<AllBlogs />}/>
+              <Route path="/OurStory" element={<OurStory />}/>
           </Route>
               <Route path="/Login" element={<LoginForm />}/>
               <Route path="/Signup" element={<SignupForm />}/>

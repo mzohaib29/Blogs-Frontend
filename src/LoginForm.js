@@ -46,12 +46,14 @@ h1 {
     letter-spacing: -0.03em;
     line-height: 32px;
     color: #000000;
+    text-shadow: -5px 5px 11px grey;
     font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 p {
     font-size: 16px;
     line-height: 24px;
     color: #242424;
+    text-shadow: -5px 5px 11px grey;
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
@@ -61,6 +63,7 @@ p {
     padding-top: 30px;
     font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
     border: none;
+    text-shadow: -5px 5px 11px grey;
     font-weight: 400;
     font-style: normal;
     font-size: 17px;
@@ -74,8 +77,9 @@ p {
     border: none;
     font-weight: 400;
     font-style: normal;
+    text-shadow: -5px 5px 11px grey;
     font-size: 17px;
-    padding-top: 25px;
+    padding-top: 15px;
     line-height: 1.58;
     letter-spacing: -.003em;
 }
@@ -85,11 +89,14 @@ input {
     background: transparent;
     width: 270px;
     outline: none;
+    color: #000000b5;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
     padding: 1px 2px;
     -webkit-tap-highlight-color: transparent;
     text-align: center;
-    margin: 0px 10px;
-    border-bottom: 1px solid #0000007a;
+    margin: 4px 10px;
+    // border-bottom: 1px solid #0000007a;
+    border-radius: 20px;
     font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
 }
 .email {

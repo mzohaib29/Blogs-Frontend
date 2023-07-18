@@ -22,7 +22,7 @@ const Nav = () => {
             <div className="menu">
                 <ul className="menu-list">
                     <li>
-                        <NavLink to = "/" className = "home-link" onClick={() => setMenuIcon(false)}>
+                        <NavLink to = "/OurStory" className = "home-link" onClick={() => setMenuIcon(false)}>
                             Our Story
                         </NavLink>
                     </li>
