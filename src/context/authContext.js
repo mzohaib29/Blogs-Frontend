@@ -36,19 +36,40 @@ export const AuthProvider = ({children}) => {
             // history.push('/')
             handleRedirect()
         }else{
-            alert('Something went wrong')
+            console.log("Something went wrong")
         }
     }
 
     // const SignupUser = async (e) => {
 
+    const signupUser = async (e) => {
+        const handleRedirect = () => {
+            // Redirect the user to the desired URL
+            window.location.href = '/login';
+        };
+        e.preventDefault()
+        const response = await fetch('http://127.0.0.1:8000/apiBase/signup/', {   
+            method: 'POST',
+            headers:{
+                'Content-type':'application/json',
+            },
+            body: JSON.stringify({'username': e.target.username.value ,'email': e.target.email.value, 'password': e.target.password.value}),
+        })
+        const data = await response.json()
+        console.log(data)
+        if(response.status === 201){
+            handleRedirect()
+        }else{
+            alert('Something went wrong')
+        }
+    }
     // }
 
     
     let contextData = {
         user:user,
         loginUser:loginUser,
-        // SignupUser:SignupUser
+        signupUser:signupUser,
     }
     return(
         <AuthContext.Provider value={contextData}>

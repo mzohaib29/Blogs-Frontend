@@ -11,7 +11,7 @@ const Nav = () => {
     const handleLogout = () => {
         localStorage.removeItem('authTokens');
         window.location.href = '/login'; 
-}
+    }
     return(
         <div className={menuIcon ? "navber-active" : "navbar"}>
             <div className="logo">
@@ -42,7 +42,7 @@ const Nav = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to = "/" className = "signup" onClick={() => setMenuIcon(false)}>
+                        <NavLink to = "/Signup" className = "signup" onClick={() => setMenuIcon(false)}>
                             Signup
                         </NavLink>
                     </li>

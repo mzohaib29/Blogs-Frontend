@@ -9,10 +9,7 @@ import AllBlogs from "./components/All_Blogs";
 import LoginForm from "./LoginForm";
 import PrivateRoute from "./utils/PrivateRoute";
 import { AuthProvider } from "./context/authContext";
-import LogoutNav from "./components/LogoutNav";
-import AuthContext from "./context/authContext";
-// import Banner from './components/Banner';
-// import Popular from './components/PopularSection';
+import SignupForm from "./SignupForm";
 
 function App() {
 
@@ -48,11 +45,16 @@ function App() {
           <Router>
             <Nav />
             <Routes>
-              <Route path="/" element={<Home />} exact/>
+
+              {/* Private Routes */}
+          <Route element={<PrivateRoute />}>
+          <Route path="/" element={<Home />} exact/>
               <Route path="/SingleBlog/:id" element={<SingleBlog />}/>
               <Route path="/CreateBlog" element={<CreateBlog />}/>
               <Route path="/AllBlogs" element={<AllBlogs />}/>
+          </Route>
               <Route path="/Login" element={<LoginForm />}/>
+              <Route path="/Signup" element={<SignupForm />}/>
             </Routes>
           </Router>
         </AuthProvider>

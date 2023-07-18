@@ -1,17 +1,21 @@
-import React, { useContext } from 'react';
-import { styled } from 'styled-components';
-import AuthContext from './context/authContext';
+import React, { useContext } from 'react'
+import { styled } from 'styled-components'
+import AuthContext from './context/authContext'
 
-
-function LoginForm() {
-    let {loginUser} = useContext(AuthContext)
-
+const SignupForm = () => {
+    const {signupUser} = useContext(AuthContext)
     return (
         <Wrapper>
-            <form onSubmit={loginUser}>
+            <form onSubmit={signupUser}>
                 <div className='form-fields'>
-                    <h1>Sign in with email</h1>
-                    <p>Enter the email address associated with your account, and we’ll send a magic link to your inbox.</p>
+                    <h1>Join Medium.</h1>
+                    <p>Finish creating your account for the full Medium experience.</p>
+                    <label className='email-label' For="first-name">Enter First Name</label>
+                    <input id = "first-name" className='email' type="text" name='text' />
+                    <label className='email-label' For="last-name">Enter Last Name</label>
+                    <input id = "last-name" className='email' type="text" name='text' />
+                    <label className='email-label' For="username">Usename</label>
+                    <input id = "username" className='email' type="text" name='text' />
                     <label className='email-label' For="email">Your email</label>
                     <input id = "email" className='email' type="email" name='email' />
                     <label className='password-label' For="password">Enter password</label>
@@ -20,20 +24,19 @@ function LoginForm() {
                 </div>
             </form>
         </Wrapper>
-    );
+    )
 }
-
 const Wrapper = styled.section`
 form {
     width: 40%;
     margin: 40px auto;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
-    height: 650px;
+    height: 700px;
 }
 .form-fields {
     display: flex;
     width: 50%;
-    padding: 100px;
+    padding: 0px;
     font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
     align-items: center;
     margin: 50px auto;
@@ -85,6 +88,7 @@ input {
     background: transparent;
     width: 270px;
     outline: none;
+    color: #000000b5;
     padding: 1px 2px;
     -webkit-tap-highlight-color: transparent;
     text-align: center;
@@ -119,4 +123,4 @@ input {
 }
 `;
 
-export default LoginForm;
+export default SignupForm
