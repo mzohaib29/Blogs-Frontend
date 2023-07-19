@@ -12,6 +12,33 @@ const Nav = () => {
         localStorage.removeItem('authTokens');
         window.location.href = '/login'; 
     }
+
+    const isLoggedIn = !!localStorage.getItem('authTokens');
+
+    const showBlogs = () => {
+        if(!isLoggedIn){
+            alert("Login first to see Blogs page")
+        }
+        else {
+            window.location.href = '/AllBlogs';
+        }
+    }
+    const showCreateBlog = () => {
+        if(!isLoggedIn){
+            alert("Login first to see the Write page")
+        }
+        else {
+            window.location.href = '/CreateBlog';
+        }
+    }
+    const showOurStory = () => {
+        if(!isLoggedIn){
+            alert("Login first to see Our Story page")
+        }
+        else {
+            window.location.href = '/OurStory';
+        }
+    }
     return(
         <div className={menuIcon ? "navber-active" : "navbar"}>
             <div className="logo">
@@ -22,35 +49,44 @@ const Nav = () => {
             <div className="menu">
                 <ul className="menu-list">
                     <li>
-                        <NavLink to = "/OurStory" className = "home-link" onClick={() => setMenuIcon(false)}>
+                        <NavLink to = "/OurStory" className = "home-link" onClick={showOurStory}>
                             Our Story
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to = "/CreateBlog" className = "create-link" onClick={() => setMenuIcon(false)}>
+                        <NavLink to = "/CreateBlog" className = "create-link" onClick={showCreateBlog}>
                             Write
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to = "/AllBlogs" className = "allblogs-link" onClick={() => setMenuIcon(false)}>
+                        <NavLink to = "/AllBlogs" className = "allblogs-link" onClick={showBlogs}>
                             Blogs
                         </NavLink>
                     </li>
-                    <li>
-                        <NavLink to = "/Login" className = "login" onClick={() => setMenuIcon(false)}>
-                            Login
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to = "/Signup" className = "signup" onClick={() => setMenuIcon(false)}>
-                            Signup
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to = "/Logout" className = "signup" onClick={handleLogout}>
-                            Logout
-                        </NavLink>
-                    </li>
+                    {!isLoggedIn && (
+                        <>
+                            <li>
+                                <NavLink to = "/Login" className = "login" onClick={() => setMenuIcon(false)}>
+                                    Login
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to = "/Signup" className = "signup" onClick={() => setMenuIcon(false)}>
+                                    Signup
+                                </NavLink>
+                            </li>
+                        </>
+                    )}
+                    {isLoggedIn && (
+                        <>
+                            <li>
+                                <NavLink to = "/Logout" className = "signup" onClick={handleLogout}>
+                                    Logout
+                                </NavLink>
+                            </li>
+                        
+                        </>
+                    )}
                 </ul>
             </div>
         </div>

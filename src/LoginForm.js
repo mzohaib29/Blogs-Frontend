@@ -33,7 +33,7 @@ form {
 .form-fields {
     display: flex;
     width: 50%;
-    padding: 100px;
+    padding: 70px;
     font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
     align-items: center;
     margin: 50px auto;
@@ -46,14 +46,12 @@ h1 {
     letter-spacing: -0.03em;
     line-height: 32px;
     color: #000000;
-    text-shadow: -5px 5px 11px grey;
     font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 p {
     font-size: 16px;
     line-height: 24px;
     color: #242424;
-    text-shadow: -5px 5px 11px grey;
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
@@ -63,7 +61,6 @@ p {
     padding-top: 30px;
     font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
     border: none;
-    text-shadow: -5px 5px 11px grey;
     font-weight: 400;
     font-style: normal;
     font-size: 17px;
@@ -77,7 +74,6 @@ p {
     border: none;
     font-weight: 400;
     font-style: normal;
-    text-shadow: -5px 5px 11px grey;
     font-size: 17px;
     padding-top: 15px;
     line-height: 1.58;

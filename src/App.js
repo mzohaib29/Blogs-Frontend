@@ -46,17 +46,16 @@ function App() {
           <Router>
             <Nav />
             <Routes>
-
-              {/* Private Routes */}
-          <Route element={<PrivateRoute />}>
-          <Route path="/" element={<Home />} exact/>
-              <Route path="/SingleBlog/:id" element={<SingleBlog />}/>
-              <Route path="/CreateBlog" element={<CreateBlog />}/>
-              <Route path="/AllBlogs" element={<AllBlogs />}/>
-              <Route path="/OurStory" element={<OurStory />}/>
-          </Route>
-              <Route path="/Login" element={<LoginForm />}/>
-              <Route path="/Signup" element={<SignupForm />}/>
+                {/* Private Routes */}
+                <Route element={<PrivateRoute />}>
+                <Route path="/" element={<Home />} exact/>
+                    <Route path="/SingleBlog/:id" element={<SingleBlog />}/>
+                    <Route path="/CreateBlog" element={<CreateBlog />}/>
+                    <Route path="/AllBlogs" element={<AllBlogs />}/>
+                    <Route path="/OurStory" element={<OurStory />}/>
+                </Route>
+                <Route path="/Login" element={<LoginForm />}/>
+                <Route path="/Signup" element={<SignupForm />}/>
             </Routes>
           </Router>
         </AuthProvider>

@@ -10,10 +10,10 @@ const SignupForm = () => {
                 <div className='form-fields'>
                     <h1>Join Medium.</h1>
                     <p>Finish creating your account for the full Medium experience.</p>
-                    <label className='email-label' For="first-name">Enter First Name</label>
+                    {/* <label className='email-label' For="first-name">Enter First Name</label>
                     <input id = "first-name" className='email' type="text" name='text' placeholder='Enter First Name'/>
                     <label className='email-label' For="last-name">Enter Last Name</label>
-                    <input id = "last-name" className='email' type="text" name='text' placeholder='Enter Last Name'/>
+                    <input id = "last-name" className='email' type="text" name='text' placeholder='Enter Last Name'/> */}
                     <label className='email-label' For="username">Usename</label>
                     <input id = "username" className='email' type="text" name='text' placeholder='Usename'/>
                     <label className='email-label' For="email">Your email</label>
@@ -33,7 +33,7 @@ form {
     width: 40%;
     margin: 40px auto;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
-    height: 700px;
+    height: 600px;
 }
 label {
     display:none;
@@ -42,7 +42,6 @@ label {
     display: flex;
     width: 50%;
     padding: 80px;
-    // box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
     font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
     align-items: center;
     margin: 50px auto;
@@ -54,7 +53,6 @@ h1 {
     font-weight: 400;
     letter-spacing: -0.03em;
     line-height: 32px;
-    text-shadow: -5px 5px 11px grey;
     color: #000000;
     font-family: gt-super, Georgia, Cambria, "Times New Roman", Times, serif;
 }
@@ -62,7 +60,6 @@ p {
     font-size: 16px;
     line-height: 24px;
     color: #242424;
-    text-shadow: -5px 5px 11px grey;
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
