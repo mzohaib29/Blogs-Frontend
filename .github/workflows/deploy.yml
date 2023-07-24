@@ -14,8 +14,8 @@ jobs:
       uses: actions/setup-node@v2 # available on internet
     - name: Building FrontEnd
       run: |
-            npm install --force
-            npm run build
+        npm install --force
+        npm run build
     - name: 'Deploy to App Engine'
       uses: 'google-github-actions/deploy-appengine@v0.2.0'
       with:
