@@ -14,6 +14,7 @@ jobs:
       uses: actions/setup-node@v2 # available on internet
     - name: Building FrontEnd
       run: |
+            npm dedupe
             npm install --force
             npm run build
     - name: 'Deploy to App Engine'
