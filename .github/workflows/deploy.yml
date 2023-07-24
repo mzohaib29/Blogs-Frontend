@@ -1,11 +1,8 @@
 name: Deploy to Google App Engine
-​
 on:
   push:
     branches: [master]
-​
   workflow_dispatch:
-​
 jobs:
   deploy:
     name: Deploy to Google App Engine
