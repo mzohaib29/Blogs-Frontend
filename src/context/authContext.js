@@ -21,7 +21,7 @@ export const AuthProvider = ({children}) => {
             window.location.href = '/';
         };
         e.preventDefault()
-        const response = await fetch('http://127.0.0.1:8000/apiBase/auth/', {   
+        const response = await fetch('https://medium-app-dot-cloud-work-314310.ew.r.appspot.com/apiBase/auth/', {   
             method: 'POST',
             headers:{
                 'Content-type':'application/json',
@@ -49,7 +49,7 @@ export const AuthProvider = ({children}) => {
             window.location.href = '/login';
         };
         e.preventDefault()
-        const response = await fetch('http://127.0.0.1:8000/apiBase/signup/', {   
+        const response = await fetch('https://medium-app-dot-cloud-work-314310.ew.r.appspot.com/apiBase/signup/', {   
             method: 'POST',
             headers:{
                 'Content-type':'application/json',
