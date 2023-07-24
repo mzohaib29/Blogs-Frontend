@@ -16,7 +16,7 @@ jobs:
       run: |
             npm dedupe
             npm install --force
-            npm run build
+            CI=false npm run build
     - name: 'Deploy to App Engine'
       uses: 'google-github-actions/deploy-appengine@v0.2.0'
       with:
