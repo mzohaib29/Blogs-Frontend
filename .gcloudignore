@@ -5,12 +5,12 @@ node_modules/
 <!-- build/ -->
 
 # Ignore development and build tools
-src/
+<!-- src/
 public/
 config/
 scripts/
 webpack.config.js
-babel.config.js
+babel.config.js -->
 
 # Ignore any other files or directories you want to exclude
 <!-- file-to-exclude.js
