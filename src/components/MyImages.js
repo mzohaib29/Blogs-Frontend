@@ -6,7 +6,7 @@ const MyImages = ({ imgs = [{ url: " " }] }) => {
   const [mainImage, setMainImage] = useState(imgs[0]);
   console.log("Hello main",mainImage)
 
-  const origin = "https://zohaib-app-two-dot-cloud-work-314310.ew.r.appspot.com"
+  const origin = "http://127.0.0.1:8000"
   return (
     <Wrapper>
       <div className='grid grid-four-columns'>

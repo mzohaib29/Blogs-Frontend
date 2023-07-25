@@ -6,7 +6,7 @@ import PageNavigation from "./pageNavigation";
 import MyImages from "./MyImages";
 
 const API = "https://zohaib-app-two-dot-cloud-work-314310.ew.r.appspot.com/articles/get";
-const baseURL = 'https://zohaib-app-two-dot-cloud-work-314310.ew.r.appspot.com';
+const baseURL = 'http://127.0.0.1:8000';
 
 const SingleBlog = () => {
 
