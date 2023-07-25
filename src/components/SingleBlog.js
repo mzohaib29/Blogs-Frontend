@@ -28,7 +28,7 @@ const SingleBlog = () => {
 
     useEffect(() => {
         getSingleBlog(`${API}/${id}`);
-    },[getSingleBlog, id])
+    },[])
 
     if (isSingleLoading) {
         return <div>Single page Loading......</div>
