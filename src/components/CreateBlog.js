@@ -23,7 +23,7 @@ const CreateBlog = () => {
       formData.append('author_image', authorImage);
     
       try {
-        const res = await axios.post('http://localhost:8000/articles/create/', formData);
+        const res = await axios.post('https://zohaib-app-two-dot-cloud-work-314310.ew.r.appspot.com/articles/create/', formData);
         console.log(res);
     
         // Redirect to the Home page

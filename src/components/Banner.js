@@ -1,6 +1,6 @@
 import React from "react";
 import './Banner.css'
-import AllBlogs from "./All_Blogs";
+// import AllBlogs from "./All_Blogs";
 import { NavLink } from "react-router-dom";
 
 const Banner = () => {

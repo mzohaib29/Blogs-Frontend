@@ -5,8 +5,8 @@ import { useBlogContext } from "../context/blogsContext"
 import PageNavigation from "./pageNavigation";
 import MyImages from "./MyImages";
 
-const API = "http://127.0.0.1:8000/articles/get";
-const baseURL = 'http://127.0.0.1:8000';
+const API = "https://zohaib-app-two-dot-cloud-work-314310.ew.r.appspot.com/articles/get";
+const baseURL = 'https://zohaib-app-two-dot-cloud-work-314310.ew.r.appspot.com';
 
 const SingleBlog = () => {
 
