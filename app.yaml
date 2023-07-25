@@ -1,5 +1,5 @@
 runtime: nodejs16 # or another supported version
-service: zohaib-blogs-app
+service: zohaib-blogs
 handlers:
 # Serve all static files with url ending with a file extension
   - url: /(.*\..+)$
