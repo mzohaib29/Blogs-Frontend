@@ -71,7 +71,7 @@ const Wrapper = styled.section`
     0px;
 }
 .blogs-trending section {
-    width: 30.33333%;
+    width: 29.33333%;
     padding: 20px;
 }
 .blogs-trending section:nth-child(n+7){
