@@ -8,7 +8,7 @@ import reducer from "../reducer/blogsReducer";
 
 const AppContext = createContext();
 
-const API = "https://medium-app-dot-cloud-work-314310.ew.r.appspot.com/articles/";
+const API = "https://zohaib-app-two-dot-cloud-work-314310.ew.r.appspot.com/articles/";
 // const API2 = "http://127.0.0.1:8000/articles/get/";
 
 const initialState = {
